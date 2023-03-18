@@ -31,7 +31,7 @@ class Item(BaseModel):
     money_back_guarantee: int
 
 
-with open("XGB Classifier CTR Prediction", "rb") as f:
+with open("XGB Classifier CTR Prediction.pkl", "rb") as f:
     model = joblib.load(f)
 
 
