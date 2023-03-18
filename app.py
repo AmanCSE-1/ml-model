@@ -66,7 +66,3 @@ def predict(input_data: Item):
     return {'status': 'SUCCESS',
             'message': 'Prediction is made successfully',
             'CTR_result': int(prediction_result)}
-
-
-if __name__ == '__main__':
-    uvicorn.run(app='ctrPrediction:app')
