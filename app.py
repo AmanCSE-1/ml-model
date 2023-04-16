@@ -58,11 +58,11 @@ def predict(input_data: Item):
     expensive = received['expensive']
     money_back_guarantee = received['money_back_guarantee']
 
-    prediction_result = model.predict([[banner_pos, site_domain, device_type, relationship_status, industry, genre,
+    prediction_result = model.predict_proba([[banner_pos, site_domain, device_type, relationship_status, industry, genre,
                                         targeted_sex, airtime, airlocation, expensive, money_back_guarantee,
                                         hour_of_day]])
 
     # Return the Result
     return {'status': 'SUCCESS',
             'message': 'Prediction is made successfully',
-            'CTR_result': int(prediction_result)}
+            'CTR_result': str(prediction_result[0][1])}
