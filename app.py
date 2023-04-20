@@ -48,7 +48,7 @@ def chart_visualization(industry):
 
     df = pd.read_csv(url)
 
-    industry_mapping = {0: 'Comedy', 1: 'Direct', 2: 'Drama', 3: 'Infomercial', 4: 'Other'}
+    industry_mapping = {0: 'Auto', 1: 'ClassAction', 2: 'Entertainment', 3: 'Other', 4: 'Pharma', 5: 'Political'}
     industry = industry_mapping[industry]
     df = df[(df['industry'] == industry) & (df['click'] == 1)]
 
