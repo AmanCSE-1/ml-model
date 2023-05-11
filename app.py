@@ -106,6 +106,9 @@ def predict(input_data: Item):
                                         targeted_sex, airtime, airlocation, expensive, money_back_guarantee,
                                         hour_of_day]])
     
+    # Multiply by 100, Rounded off ctr upto 2 dec places, set range between 2-72
+    ctr_result_adjustment = str(round(max(2, min(72, float(str(prediction_result[0][1]))*100)), 2))
+    
     # Call the graph visualization function
     graph_data_array = chart_visualization(industry)
     
