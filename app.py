@@ -115,5 +115,5 @@ def predict(input_data: Item):
     # Return the Result
     return {'status': 'SUCCESS',
             'message': 'Prediction is made successfully',
-            'CTR_result': str(prediction_result[0][1]),
+            'CTR_result': ctr_result_adjustment,
             'graph_visualization': graph_data_array}
